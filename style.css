@@ -5,6 +5,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'KOTRA_BOLD-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-family: 'TmoneyRoundWindExtraBold' !important;
     background-color: #f3f3f4 !important;
@@ -12,6 +19,7 @@ body {
 
 
 .header {
+    font-family: 'KOTRA_BOLD-Bold' !important;
     background-color: #d9ceba;
     width: 100%;
     word-wrap: break-word;
@@ -200,6 +208,7 @@ div.upload-icon {
 .member-list {
     text-align: center;
     font-size: 1.5rem;
+    font-style: italic;
 }
 
 @media screen and (max-width: 600px) {
