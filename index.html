@@ -40,11 +40,12 @@
 <body>
     <!-- header -->
     <section class="header">
-        <div class="header-note"><a href="https://MUDObyface.netlify.app/" style="font-weight: bold; color: black;">무한도전 닮은꼴 테스트</a></div>
+        <div class="header-note"><a href="https://MUDObyface.netlify.app/" style="text-decoration: none;font-weight: bold; color: black;">무한도전 닮은꼴 테스트</a></div>
     </section>
     <section class="section">
-        <h1 class="title" style="font-weight: bold;">인공지능이 말해주는 무한도전 멤버 닮은꼴 테스트</h1>
+        <h1 class="title">인공지능이 말해주는 무한도전 멤버 닮은꼴 테스트</h1>
         <h2 class="subtitle">올타임 레전드 방송!<br>나는 어떤 무한도전 멤버와 닮았을까?</h2>
+        <h3 class="member-list">길 ・ 노홍철 ・ 박명수 ・ 양세형 ・ 유재석 ・ 전진 ・ 정준하 ・ 정형돈 ・ 조세호 ・ 하하 ・ 황광희</h3>
     </section>
 
     <!-- file upload wrap -->
@@ -88,7 +89,7 @@
             </div> -->
         </div>
     </div>
-    <div class="short-message" style="text-align: center; margin-bottom: 30px;">*무한도전 프로그램 정규 편성 이후 멤버들만 포함합니다 <br>* 사진은 어디에도 저장되지 않습니다.</div>
+    <div class="short-message" style="text-align: center; margin-bottom: 30px;">*무한도전 프로그램 정규 편성 이후 멤버들만 포함합니다. <br>* 사진은 어디에도 저장되지 않습니다.</div>
     
     <!-- Kakao adfit -->
 
@@ -175,13 +176,12 @@
         // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
         // the link to your model provided by Teachable Machine export panel
-        const URL_members = "teachable machine url";
+        const URL = "https://teachablemachine.withgoogle.com/models/xxhHdYrhU/";
 
         let model, labelContainer, maxPredictions;
 
         // Load the image model and setup the webcam
         async function init() {
-            URL = URL_members;
             const modelURL = URL + "model.json";
             const metadataURL = URL + "metadata.json";
 
@@ -268,28 +268,8 @@
         }
     </script>
 
-    <!-- Disqus script -->
-    <script>
-        /*
-         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-        var disqus_config = function () {
-            this.page.url =
-                'https://MUDObyface.netlify.app/'; // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier =
-                'dyl-project'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        (function () { // DON'T EDIT BELOW THIS LINE
-            var d = document,
-                s = d.createElement('script');
-            s.src = 'https://dyl-project.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
-            Disqus.</a></noscript>
-    <script id="dsq-count-scr" src="https://dyl-project.disqus.com/count.js" async></script>
+    <!-- Disqus script or comment script -->
+   
 
 
 
