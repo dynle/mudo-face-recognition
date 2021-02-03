@@ -57,7 +57,7 @@
             <h1 style="display: inline-block; color: rgb(228, 72, 72); vertical-align: -5%; font-size: 3.5rem;">전</h1>
             <h1 style="display: inline-block;">멤버 닮은꼴 테스트</h1>
         </div>
-        <h2 class="subtitle">올타임 레전드 방송!<br>나는 어떤 멤버와 닮았을까?</h2>
+        <h2 class="subtitle">추억의 올타임 레전드 방송!<br>나는 어떤 멤버와 닮았을까?</h2>
         <h3 class="member-list">길 ・ 노홍철 ・ 박명수 ・ 양세형 ・ 유재석 ・ 전진 ・ 정준하 ・ 정형돈 ・ 조세호 ・ 하하 ・ 황광희</h3>
     </section>
 
@@ -83,8 +83,8 @@
                     </path>
                 </svg>
                 Loading</div>
-            <div class="fixed-result-message" style="font-size: 30px;"></div>
-            <div class="result-message" style="font-size: 70px;"></div>
+            <div class="fixed-result-message" style="font-size: 20px;"></div>
+            <div class="result-message" style="font-size: 40px;"></div>
             <div id="label-container"></div>
             <!-- <div class="horizontal-bar-graph" id="my-graph"></div> -->
             <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -253,7 +253,42 @@
             prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
             var resultMessage = prediction[0].className;
             $('.fixed-result-message').html("당신과 가장 닮은 멤버는")
-            $('.result-message').html(resultMessage);
+            switch (resultMessage){
+                case "길":
+                    $('.result-message').html("길메오 "+resultMessage);
+                    break;
+                case "노홍철":
+                    $('.result-message').html("노찌롱 "+resultMessage);
+                    break;
+                case "박명수":
+                    $('.result-message').html("2인자 거성 "+resultMessage);
+                    break;
+                case "양세형":
+                    $('.result-message').html("양세바리 "+resultMessage);
+                    break;                
+                case "유재석":
+                    $('.result-message').html("국민MC 메뚜기 "+resultMessage);
+                    break;                
+                case "전진":
+                    $('.result-message').html("잔스틴 "+resultMessage);
+                    break;                
+                case "정준하":
+                    $('.result-message').html("정주나 안정주나 늘 정주는 "+resultMessage);
+                    break;                
+                case "정형돈":
+                    $('.result-message').html("미존개오 "+resultMessage);
+                    break;                
+                case "조세호":
+                    $('.result-message').html("대답 자판기 "+resultMessage);
+                    break;                
+                case "하하":
+                    $('.result-message').html("상꼬맹이 "+resultMessage);
+                    break;                
+                case "황광희":
+                    $('.result-message').html("종이 인형 "+resultMessage);
+                    break;                
+            }
+            
 
             HorizontalBarGraph = function (el, series) {
                 this.el = d3.select(el);
